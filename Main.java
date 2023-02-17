@@ -17,9 +17,28 @@ public class Main {
     }
     return result;
   }
+
+  public static String valedictorianName(String[] studentNames, double[] studentGrades) {
+    String result = "";
+    double curMaxGrade = 0;
+
+    for (int index = 0; index < studentGrades.length; index++) {
+      if (studentGrades[index] > curMaxGrade) {
+        curMaxGrade = studentGrades[index];
+        result = studentNames[index];
+      }
+    }
+    return result;
+  }
   
   public static void main(String[] args) {
-    int[] nums = {95,72,85,65,36};
-    System.out.println(formGradeString(nums));
+    // formGradeString
+    //int[] nums = {95,72,85,65,36};
+    //System.out.println(formGradeString(nums));
+
+    // valedictorianName
+    String[] studs = {"emily","albert","sophie","phillip","ophelia"};
+    double[] gpas = {0.223,3.528,3.237,1.437,1.162};
+    System.out.println(valedictorianName(studs, gpas));
   }
 }
