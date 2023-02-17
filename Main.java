@@ -30,6 +30,21 @@ public class Main {
     }
     return result;
   }
+
+  public static int[] longestPlateau(int[] nums) {
+    // bad code :)
+    int length = 0;
+    int startingIn = 0;
+    int[] result = {length,startingIn};
+    for (int index = 1; index < nums.length;index++) {
+      if (nums[index] == nums[index-1]) {
+        length++;
+      } else {
+        length = 0;
+      }
+    }
+    return result;
+  }  
   
   public static void main(String[] args) {
     // formGradeString
@@ -37,8 +52,12 @@ public class Main {
     //System.out.println(formGradeString(nums));
 
     // valedictorianName
-    String[] studs = {"emily","albert","sophie","phillip","ophelia"};
-    double[] gpas = {0.223,3.528,3.237,1.437,1.162};
-    System.out.println(valedictorianName(studs, gpas));
+    //String[] studs = {"emily","albert","sophie","phillip","ophelia"};
+    //double[] gpas = {0.223,3.528,3.237,1.437,1.162};
+    //System.out.println(valedictorianName(studs, gpas));
+
+    // longestPlateau
+    //int[] a = {0,3,1,1,1,0,2,2,1,1};
+    //System.out.println(longestPlateau(a));
   }
 }
